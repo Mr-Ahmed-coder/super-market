@@ -27,10 +27,27 @@ const allowedOrigins = (process.env.CLIENT_URL || process.env.FRONTEND_URL || ''
   .map((origin) => origin.trim())
   .filter(Boolean);
 
+const isAllowedOrigin = (origin) => {
+  if (!origin) {
+    return true;
+  }
+
+  if (allowedOrigins.includes(origin)) {
+    return true;
+  }
+
+  try {
+    const { hostname } = new URL(origin);
+    return hostname === 'localhost' || hostname === '127.0.0.1' || hostname.endsWith('.vercel.app');
+  } catch (error) {
+    return false;
+  }
+};
+
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || allowedOrigins.length === 0 || allowedOrigins.includes(origin)) {
+      if (isAllowedOrigin(origin)) {
         return callback(null, true);
       }
 
@@ -41,6 +58,13 @@ app.use(
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Supermarket API is running successfully'
+  });
+});
 
 app.get('/api/health', (req, res) => {
   res.status(200).json({
