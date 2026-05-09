@@ -2,7 +2,12 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    const mongoUri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/supermarket_management';
+    const mongoUri = process.env.MONGO_URI;
+
+    if (!mongoUri) {
+      throw new Error('MONGO_URI environment variable is required');
+    }
+
     const conn = await mongoose.connect(mongoUri);
 
     console.log(`MongoDB connected: ${conn.connection.host}`);

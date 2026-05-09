@@ -10,10 +10,10 @@ cp .env.example .env
 npm run dev
 ```
 
-The default MongoDB URI is local-first:
+Set your MongoDB Atlas URI in the environment:
 
 ```env
-MONGO_URI=mongodb://127.0.0.1:27017/supermarket_management
+MONGO_URI=mongodb+srv://<username>:<password>@<cluster>/<database>
 ```
 
 ## Auth Endpoints

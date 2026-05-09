@@ -13,7 +13,7 @@ npm run dev
 The frontend calls the backend through:
 
 ```env
-VITE_API_BASE_URL=http://localhost:5000/api
+VITE_API_URL=https://your-render-backend.onrender.com/api
 ```
 
 ## Routes
