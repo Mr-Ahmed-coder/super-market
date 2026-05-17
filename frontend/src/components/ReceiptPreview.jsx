@@ -24,6 +24,7 @@ function ReceiptPreview({ sale, settings, onClose }) {
     typeof sale.cashier === 'string'
       ? sale.cashier
       : sale.cashier?.name || sale.cashier?.email || 'Cashier';
+  const supermarketName = settings?.supermarketName || 'HeX Supermarket';
 
   const handlePrint = () => {
     window.print();
@@ -46,9 +47,9 @@ function ReceiptPreview({ sale, settings, onClose }) {
           <article className="receipt-print-area" aria-label="Printable sale receipt">
             <header className="receipt-store-header">
               {settings?.logo && (
-                <img className="receipt-logo" src={settings.logo} alt={settings.supermarketName || 'Store logo'} />
+                <img className="receipt-logo" src={settings.logo} alt={`${supermarketName} logo`} />
               )}
-              <h1>{settings?.supermarketName || 'Supermarket'}</h1>
+              <h1>{supermarketName}</h1>
               {settings?.address && <p>{settings.address}</p>}
               {settings?.phone && <p>Tel: {settings.phone}</p>}
             </header>

@@ -413,6 +413,24 @@ a {
   display: none;
 }
 
+.navbar-title {
+  display: grid;
+  gap: 2px;
+  min-width: 168px;
+}
+
+.navbar-title span {
+  color: var(--dark-navy);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.navbar-title small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
 .navbar-search {
   display: flex;
   flex: 1;
@@ -2070,6 +2088,14 @@ meter {
   }
 
   .navbar-search {
+    display: none;
+  }
+
+  .navbar-title {
+    min-width: 0;
+  }
+
+  .navbar-title small {
     display: none;
   }
 

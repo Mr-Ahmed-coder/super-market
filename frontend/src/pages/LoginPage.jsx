@@ -44,8 +44,8 @@ function LoginPage() {
             <Store size={30} />
           </div>
           <div>
-            <h1>MarketPro</h1>
-            <p>Supermarket management dashboard</p>
+            <h1>HeX Supermarket</h1>
+            <p>Modern supermarket management dashboard</p>
           </div>
         </div>
 

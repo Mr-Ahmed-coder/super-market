@@ -15,8 +15,8 @@ function Sidebar({ isOpen, onClose }) {
             <Store size={22} />
           </div>
           <div>
-            <span className="brand-title">MarketPro</span>
-            <span className="brand-subtitle">Supermarket Suite</span>
+            <span className="brand-title">HeX Supermarket</span>
+            <span className="brand-subtitle">Enterprise retail suite</span>
           </div>
           <button className="sidebar-close" type="button" onClick={onClose} aria-label="Close sidebar">
             <X size={20} />

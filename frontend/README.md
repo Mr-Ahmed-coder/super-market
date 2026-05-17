@@ -1,4 +1,4 @@
-# Supermarket Management Frontend
+# HeX Supermarket Frontend
 
 Phase 1 Step 2 frontend built with Vite, React, React Router DOM, and Axios.
 

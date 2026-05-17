@@ -157,7 +157,7 @@ function DashboardPage() {
       <section className="page-header">
         <div>
           <p className="eyebrow">Dashboard</p>
-          <h1>Welcome, {user?.name || 'User'}</h1>
+          <h1>Welcome to HeX Supermarket, {user?.name || 'User'}</h1>
           <p>Monitor real store activity from live sales, inventory, customers, suppliers, and purchases.</p>
         </div>
       </section>

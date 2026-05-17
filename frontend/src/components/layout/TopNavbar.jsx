@@ -17,6 +17,11 @@ function TopNavbar({ onMenuClick }) {
         <Menu size={22} />
       </button>
 
+      <div className="navbar-title">
+        <span>HeX Supermarket</span>
+        <small>Management System</small>
+      </div>
+
       <div className="navbar-search">
         <Search size={18} />
         <input type="search" placeholder="Search inventory, sales, users..." />
